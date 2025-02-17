@@ -22,7 +22,15 @@
     }
     
     echo "Todos os pedidos foram processados.\n";
-    
+
+
+    $numeroPedidos = 5;   
+    $contador = 1;
+
+    do {
+        echo "Processando pedido $contador <br>";
+        $contador++;
+    } while ($contador <= $numeroPedidos);
     ?>
     
 </body>
