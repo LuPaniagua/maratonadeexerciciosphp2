@@ -30,6 +30,20 @@ foreach ($funcionarios as $funcionario) {
         echo "Acesso negado para $nome.\n";
     }
 }
+
+// Dados do Funcionário
+$nome = "João Silva";
+$ativo = true;    //Cadastro ativo
+$permissao = true;    //Permissão de acesso
+$cargo = "admin";    //Cargo de funcionário (pode ser 'admin' ou 'funcionario')
+
+// Verificando a autenticação com operadores lógicos
+if ($cargo === "admin" || ($ativo && $permissao)){
+    echo "Acesso permitido para" . $nome;
+} else {
+    echo "Acesso negado para" . $nome;
+}
+
 ?>
 
     
