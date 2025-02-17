@@ -34,8 +34,24 @@ while ($tentativas > 0) {
 if ($tentativas === 0) {
     echo "Acesso Negado\n";
 }
-?>
 
-    
+$senha_correta = "12345";
+$tentativas = 3;
+$senha_tentativas = ["wrong", "wrong", "wrong"]; //Todas as tentativas são erradas
+
+while ($tentativas > 0) {
+    $senha = $senha_tentativas[3 - $tentativas]; //Acesso à tentativa atual
+
+    if ($senha == $senha_correta){
+        echo "Acesso concedido!\n";
+        break;
+    } else {
+        $tentativas--;
+        echo "Senha incorreta. Tentativas restantes: $tentativas <br>";
+    }
+}
+
+if ($tentativas == 0) echo "Acesso negado.<br>";  
+?>  
 </body>
 </html>
