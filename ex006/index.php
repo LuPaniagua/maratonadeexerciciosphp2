@@ -28,7 +28,25 @@
     if ($tentativas === 0) {
         echo "Acesso negado";
     }
-     
+
+    $senhaCorreta = "senha123"; //Senha correta
+    $tentativas = 0;
+
+    do {
+        //Simulla a senha errada (senha tentada é sempre errada)
+        $senhaDigitada = "senha" . ($tentativas + 1);
+        $tentativas++;
+
+        //Mensagens diferentes a casa tentativa
+
+        switch (tentativas) {
+            case 1:
+            echo "Primeira tentativa... Vamos lá" <br>";
+            break;
+            case 2
+
+
+        
     
     ?>
 </body>
